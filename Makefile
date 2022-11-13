@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 16:18:33 by hmesrar           #+#    #+#              #
-#    Updated: 2022/11/12 16:18:33 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/11/13 20:17:35 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,13 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-FILES =
+FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_putnbr_id.c ft_putnbr_xX.c ft_putnbr_u.c ft_putnbr_p.c ft_printf.c
+
+OBJS = $(FILES:.c=.o)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
-	@echo "\n$(GREEN)--> Libft Library created!\n$(DEF_COLOR)"
+	@echo "\n$(GREEN)--> libftprintf Library created!\n$(DEF_COLOR)"
 
 %.o : %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -45,4 +47,3 @@ re: fclean all
 DEF_COLOR =\033[0;39m
 GREEN =\033[0;92m
 RED =\033[0;91m
-Footer
