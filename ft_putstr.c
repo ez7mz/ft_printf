@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 16:33:47 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/11/13 23:39:03 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/11/14 18:10:14 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int    ft_putstr(char *s)
     len = 0;
     if (!s)
         s = "(null)";
-    write(1, s, ft_strlen(s));
-    len += ft_strlen(s);
+    len += write(1, s, ft_strlen(s));
     return (len);
 }
