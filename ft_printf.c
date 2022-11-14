@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 16:24:45 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/11/14 23:39:55 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/11/14 23:43:26 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_format(va_list args, char format)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (format == 'c')
@@ -32,7 +32,8 @@ static int	ft_format(va_list args, char format)
 	else if (format == 'p')
 	{
 		len += write(1, "0x", 2);
-		len += ft_putnbr_p(va_arg(args, unsigned long long), "0123456789abcdef");
+		len += ft_putnbr_p(va_arg(args, unsigned long long),
+				"0123456789abcdef");
 	}
 	else if (format == '%')
 		len += ft_putchar('%');
@@ -43,7 +44,7 @@ static int	ft_format(va_list args, char format)
 
 int	ft_printf(const char *s, ...)
 {
-	va_list args;
+	va_list	args;
 	int		i;
 	int		len;
 
@@ -54,7 +55,7 @@ int	ft_printf(const char *s, ...)
 		return (-1);
 	while (s[i])
 	{
-		if (s[i] == '%' && !s[i+1])
+		if (s[i] == '%' && !s[i + 1])
 			break ;
 		if (s[i] == '%')
 		{
@@ -66,7 +67,5 @@ int	ft_printf(const char *s, ...)
 		i++;
 	}
 	va_end(args);
-	if (len < 0)
-		len = -1;
 	return (len);
 }
