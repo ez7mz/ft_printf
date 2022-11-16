@@ -6,18 +6,18 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 16:35:35 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/11/12 16:35:35 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/11/16 22:28:44 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

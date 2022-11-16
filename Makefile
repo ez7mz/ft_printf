@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 16:18:33 by hmesrar           #+#    #+#              #
-#    Updated: 2022/11/13 20:21:27 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/11/16 22:05:37 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,9 @@ fclean: clean
 re: fclean all
 	@echo "$(GREEN)--> Refresh successfully!\n$(DEF_COLOR)"
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re
 
 #Colors
-DEF_COLOR =\033[0;39m
-GREEN =\033[0;92m
-RED =\033[0;91m
+DEF_COLOR =\033[1;39m
+GREEN =\033[1;92m
+RED =\033[1;91m
